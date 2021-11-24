@@ -6,16 +6,42 @@
 //
 
 import SwiftUI
+import Combine
+
+
 
 struct ContentView: View {
+    
+    @State public var isLogin = false
+    @State public var OTPdidSent = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+//            BackgroundView(isLogin: $isLogin)
+            NavigationView {
+                LoginView(isLogin: $isLogin, OTPdidSent:$OTPdidSent)
+            }
+            .navigationBarTitle("Đăng nhập")
+        }
+            
+            
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+        }
+    }
+}
+
+
+
+
+
+extension String {
+    subscript (characterIndex: Int) -> Character {
+        return self[index(startIndex, offsetBy: characterIndex)]
     }
 }
