@@ -23,13 +23,10 @@ struct LoginView: View {
                         NavigationLink(destination: OTPNumberTextField(otpnumber: $otpnumber, isLogin: $isLogin), isActive: $OTPdidSent) {
                             EmptyView()
                         }
-                        
                         PhoneNumberTextField(phonenumber: $phonenumber, OTPdidSent: $OTPdidSent)
                     }
                 .padding()
             }
-        } else {
-            Text("Logged in")
         }
     }
 }
@@ -123,7 +120,7 @@ struct OTPNumberTextField: View {
                 Text("Nhập mã OTP đã gửi về số điện thoại của bạn")
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 40.0)
-                TextField("Mã OTP", text: $otpnumber)
+                LimitedTextField(value: $otpnumber, charLimit: 4)
                     .keyboardType(.numberPad)
                     .padding(.all, 14.194)
                     .background(Color.white)
@@ -143,10 +140,13 @@ struct OTPNumberTextField: View {
                         .foregroundColor(.white)
                         .padding(.top, 2.0)
                         .frame(width: 280, height: 60)
-                }
-                .buttonStyle(
-                    MyButtonStyle()
-                )
+                        .cornerRadius(15.0)
+              }
+              .disabled((otpnumber.count) < 4)
+              .buttonStyle(
+                  MyButtonStyle()
+              )
+                
             }
             .padding(.bottom, 40.0)
     }
@@ -181,4 +181,39 @@ private extension MyButtonStyle {
         .cornerRadius(15.0)
     }
   }
+}
+
+struct LimitedTextField : View {
+    @State private var enteredString: String = ""
+    @Binding var underlyingString: String
+    let charLimit : Int
+    
+    init(value: Binding<String>, charLimit: Int) {
+        _underlyingString = value
+        self.charLimit = charLimit
+    }
+    
+    var body: some View {
+        HStack {
+            TextField("Mã OTP", text: $enteredString, onCommit: updateUnderlyingValue)
+                .onAppear(perform: { updateEnteredString(newUnderlyingString: underlyingString) })
+                .onChange(of: enteredString, perform: updateUndelyingString)
+                .onChange(of: underlyingString, perform: updateEnteredString)
+        }
+    }
+    
+    func updateEnteredString(newUnderlyingString: String) {
+        enteredString = String(newUnderlyingString.prefix(charLimit))
+    }
+    
+    func updateUndelyingString(newEnteredString: String) {
+        if newEnteredString.count > charLimit {
+            self.enteredString = String(newEnteredString.prefix(charLimit))
+            underlyingString = self.enteredString
+        }
+    }
+    
+    func updateUnderlyingValue() {
+        underlyingString = enteredString
+    }
 }

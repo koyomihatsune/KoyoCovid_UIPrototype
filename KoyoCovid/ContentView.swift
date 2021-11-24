@@ -8,23 +8,18 @@
 import SwiftUI
 import Combine
 
-
-
 struct ContentView: View {
-    
     @State public var isLogin = false
     @State public var OTPdidSent = false
     
     var body: some View {
-        ZStack{
-//            BackgroundView(isLogin: $isLogin)
             NavigationView {
-                LoginView(isLogin: $isLogin, OTPdidSent:$OTPdidSent)
+                if (isLogin == false){
+                    LoginView(isLogin: $isLogin, OTPdidSent:$OTPdidSent)
+                } else {
+                    HomeView()
+                }
             }
-            .navigationBarTitle("Đăng nhập")
-        }
-            
-            
     }
 }
 

@@ -12,6 +12,7 @@
 		7C3EDCB0274DF56B00840C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3EDCAF274DF56B00840C4D /* Assets.xcassets */; };
 		7C3EDCB3274DF56B00840C4D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3EDCB2274DF56B00840C4D /* Preview Assets.xcassets */; };
 		7C3EDCC2274E25B500840C4D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3EDCC1274E25B500840C4D /* LoginView.swift */; };
+		7C3EDCCC274E4C7800840C4D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3EDCCB274E4C7800840C4D /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7C3EDCB2274DF56B00840C4D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C3EDCB4274DF56B00840C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C3EDCC1274E25B500840C4D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7C3EDCCB274E4C7800840C4D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				7C3EDCAB274DF56900840C4D /* KoyoCovidApp.swift */,
 				7C3EDCAD274DF56900840C4D /* ContentView.swift */,
+				7C3EDCCB274E4C7800840C4D /* HomeView.swift */,
 				7C3EDCC1274E25B500840C4D /* LoginView.swift */,
 				7C3EDCAF274DF56B00840C4D /* Assets.xcassets */,
 				7C3EDCB4274DF56B00840C4D /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C3EDCC2274E25B500840C4D /* LoginView.swift in Sources */,
+				7C3EDCCC274E4C7800840C4D /* HomeView.swift in Sources */,
 				7C3EDCAE274DF56900840C4D /* ContentView.swift in Sources */,
 				7C3EDCAC274DF56900840C4D /* KoyoCovidApp.swift in Sources */,
 			);
