@@ -13,13 +13,12 @@ struct ContentView: View {
     @State public var OTPdidSent = false
     
     var body: some View {
-            NavigationView {
                 if (isLogin == false){
                     LoginView(isLogin: $isLogin, OTPdidSent:$OTPdidSent)
                 } else {
                     HomeView()
+            
                 }
-            }
     }
 }
 
@@ -30,10 +29,6 @@ struct ContentView_Previews: PreviewProvider {
         }
     }
 }
-
-
-
-
 
 extension String {
     subscript (characterIndex: Int) -> Character {

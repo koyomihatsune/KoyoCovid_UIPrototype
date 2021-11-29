@@ -16,18 +16,19 @@ struct LoginView: View {
     @State var otpnumber: String = ""
     
     var body: some View {
-        if (isLogin == false) {
+        NavigationView {
             ZStack {
                 BackgroundView()
                 VStack{
-                        NavigationLink(destination: OTPNumberTextField(otpnumber: $otpnumber, isLogin: $isLogin), isActive: $OTPdidSent) {
+                    NavigationLink(destination: OTPNumberTextField(otpnumber: $otpnumber, isLogin: $isLogin), isActive: $OTPdidSent) {
                             EmptyView()
                         }
-                        PhoneNumberTextField(phonenumber: $phonenumber, OTPdidSent: $OTPdidSent)
+                    PhoneNumberTextField(phonenumber: $phonenumber, OTPdidSent: $OTPdidSent)
                     }
                 .padding()
             }
         }
+            
     }
 }
 
