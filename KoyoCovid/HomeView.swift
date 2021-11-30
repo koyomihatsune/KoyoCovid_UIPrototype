@@ -74,10 +74,8 @@ struct CardView: View {
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.leading)
-                                
                             HStack{
                                 Image(systemName: "checkmark.shield")
-                                
                                 Text("Đã tiêm đủ 2 mũi".uppercased())
                                     .font(.footnote)
                                     .fontWeight(.bold)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0882FC27559F26005EB6BE /* DeclarationHistoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0882FB27559F26005EB6BE /* DeclarationHistoryRow.swift */; };
 		7C3EDCAC274DF56900840C4D /* KoyoCovidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3EDCAB274DF56900840C4D /* KoyoCovidApp.swift */; };
 		7C3EDCAE274DF56900840C4D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3EDCAD274DF56900840C4D /* ContentView.swift */; };
 		7C3EDCB0274DF56B00840C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C3EDCAF274DF56B00840C4D /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C0882FB27559F26005EB6BE /* DeclarationHistoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationHistoryRow.swift; sourceTree = "<group>"; };
 		7C3EDCA8274DF56900840C4D /* KoyoCovid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoyoCovid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C3EDCAB274DF56900840C4D /* KoyoCovidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoyoCovidApp.swift; sourceTree = "<group>"; };
 		7C3EDCAD274DF56900840C4D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				7C3EDCCB274E4C7800840C4D /* HomeView.swift */,
 				7CC39EC027538ACA00DD3E1D /* DeclarationView.swift */,
 				7CC39EC72754446A00DD3E1D /* DeclarationHistoryView.swift */,
+				7C0882FB27559F26005EB6BE /* DeclarationHistoryRow.swift */,
 				7C3EDCC1274E25B500840C4D /* LoginView.swift */,
 				7C3EDCAF274DF56B00840C4D /* Assets.xcassets */,
 				7C3EDCB4274DF56B00840C4D /* Info.plist */,
@@ -154,6 +157,7 @@
 				7C3EDCC2274E25B500840C4D /* LoginView.swift in Sources */,
 				7CC39EC127538ACA00DD3E1D /* DeclarationView.swift in Sources */,
 				7C3EDCCC274E4C7800840C4D /* HomeView.swift in Sources */,
+				7C0882FC27559F26005EB6BE /* DeclarationHistoryRow.swift in Sources */,
 				7C3EDCAE274DF56900840C4D /* ContentView.swift in Sources */,
 				7C3EDCAC274DF56900840C4D /* KoyoCovidApp.swift in Sources */,
 			);

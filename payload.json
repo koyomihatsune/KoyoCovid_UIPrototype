@@ -1,0 +1,8 @@
+{
+    "aps": {
+        "alert": {
+            "body": "Mã OTP của bạn là 1111",
+            "title": "Photos"
+        }
+    }
+}
